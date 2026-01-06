@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>UIU CGPA and Tuition Fees Calculator | Smart UIU - United International University</title>
+    <meta name="title" content="UIU CGPA and Tuition Fees Calculator | Smart UIU">
+    <meta name="description"
+        content="Free online UIU CGPA and tuition fees calculator for United International University students. Calculate your CGPA with retake support, view grading policy, and calculate tuition fees with waiver and installment breakdown.">
+    <meta name="keywords"
+        content="uiu cgpa calculator, uiu tuition fees calculator, united international university, cgpa calculator bangladesh, uiu grading policy, uiu waiver calculator, uiu installment calculator, uiu gpa calculator, bangladesh university calculator">
+    <meta name="author" content="Smart UIU">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://argha5.github.io/uiucgpa-tutionfees/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://argha5.github.io/uiucgpa-tutionfees/">
+    <meta property="og:title" content="UIU CGPA and Tuition Fees Calculator | Smart UIU">
+    <meta property="og:description"
+        content="Free online UIU CGPA and tuition fees calculator for United International University students. Calculate your CGPA with retake support, view grading policy, and calculate tuition fees with waiver and installment breakdown.">
+    <meta property="og:site_name" content="Smart UIU">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://argha5.github.io/uiucgpa-tutionfees/">
+    <meta property="twitter:title" content="UIU CGPA and Tuition Fees Calculator | Smart UIU">
+    <meta property="twitter:description"
+        content="Free online UIU CGPA and tuition fees calculator for United International University students. Calculate your CGPA with retake support, view grading policy, and calculate tuition fees with waiver and installment breakdown.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-content">
+            <div class="header-left">
+                <div class="app-logo">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        aria-label="Smart UIU Logo - UIU CGPA and Tuition Fees Calculator">
+                        <rect width="32" height="32" rx="6" fill="white" />
+                        <path d="M16 8L12 12L16 16L20 12L16 8Z" fill="#FF9800" />
+                        <path d="M16 16L12 20L16 24L20 20L16 16Z" fill="#FF9800" />
+                    </svg>
+                </div>
+                <h1 class="app-title">Smart UIU - CGPA & Tuition Calculator</h1>
+            </div>
+            <div class="header-right">
+                <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+                    <svg class="theme-icon sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="theme-icon moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button id="menuBtn" class="icon-btn" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="5" r="1" />
+                        <circle cx="12" cy="12" r="1" />
+                        <circle cx="12" cy="19" r="1" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Dropdown -->
+        <div id="menuDropdown" class="menu-dropdown hidden">
+            <button class="menu-item" id="privacyBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                Privacy Policy
+            </button>
+            <button class="menu-item" id="contactBtn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                </svg>
+                Developer Contact
+            </button>
+        </div>
+
+        <!-- Tabs -->
+        <nav class="tabs">
+            <button class="tab active" data-tab="calculate">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="2" width="16" height="20" rx="2" />
+                    <line x1="8" y1="6" x2="16" y2="6" />
+                    <line x1="8" y1="10" x2="16" y2="10" />
+                    <line x1="8" y1="14" x2="16" y2="14" />
+                    <line x1="8" y1="18" x2="16" y2="18" />
+                </svg>
+                CALCULATE
+            </button>
+            <button class="tab" data-tab="grading">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                    <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                </svg>
+                GRADING
+            </button>
+            <button class="tab" data-tab="tuition">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <line x1="2" y1="10" x2="22" y2="10" />
+                </svg>
+                TUITION
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Calculate Tab -->
+        <div id="calculateTab" class="tab-content active">
+            <div class="container">
+                <!-- Current CGPA Inputs -->
+                <div class="input-row">
+                    <div class="input-card">
+                        <label for="completedCredits">Completed Credits</label>
+                        <input type="number" id="completedCredits" placeholder="0" min="0" step="0.5">
+                    </div>
+                    <div class="input-card">
+                        <label for="currentCgpa">Current CGPA</label>
+                        <input type="number" id="currentCgpa" placeholder="0.00" min="0" max="4" step="0.01">
+                    </div>
+                </div>
+
+                <!-- Course Headers -->
+                <div class="course-headers">
+                    <div class="header-item">Course</div>
+                    <div class="header-item">Credit</div>
+                    <div class="header-item">Grade</div>
+                </div>
+
+                <!-- Course Rows Container -->
+                <div id="courseRowsContainer"></div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="resetBtn" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="23 4 23 10 17 10" />
+                            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                        </svg>
+                        RESET
+                    </button>
+                    <button id="addCourseBtn" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="12" y1="5" x2="12" y2="19" />
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                        </svg>
+                        ADD MORE
+                    </button>
+                    <button id="retakeBtn" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <polyline points="17 1 21 5 17 9" />
+                            <path d="M3 11V9a4 4 0 0 1 4-4h14" />
+                            <polyline points="7 23 3 19 7 15" />
+                            <path d="M21 13v2a4 4 0 0 1-4 4H3" />
+                        </svg>
+                        RETAKE
+                    </button>
+                </div>
+
+                <!-- Calculate Button -->
+                <button id="calculateBtn" class="btn btn-primary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="4" y="2" width="16" height="20" rx="2" />
+                        <line x1="8" y1="6" x2="16" y2="6" />
+                        <line x1="8" y1="10" x2="16" y2="10" />
+                        <line x1="8" y1="14" x2="16" y2="14" />
+                    </svg>
+                    CALCULATE CGPA
+                </button>
+
+                <!-- Result Display -->
+                <div id="resultCard" class="result-card hidden">
+                    <div class="result-header">
+                        <svg class="star-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                        <span>Your CGPA</span>
+                        <svg class="star-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <polygon
+                                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                        </svg>
+                    </div>
+                    <div id="cgpaValue" class="result-value">0.00</div>
+                    <div id="cgpaDescription" class="result-description">Enter your courses to calculate</div>
+                    <div id="perfectBadge" class="perfect-badge hidden">🎉 Perfect Score!</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grading Tab -->
+        <div id="gradingTab" class="tab-content">
+            <div class="container">
+                <!-- Header Card -->
+                <div class="info-card">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                        <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                    </svg>
+                    <h2>UIU Grading Policy</h2>
+                    <p>Official grade scale and marking system</p>
+                </div>
+
+                <!-- Grade Table Headers -->
+                <div class="grade-table-header">
+                    <div class="grade-header-item">Grade</div>
+                    <div class="grade-header-item">CGPA</div>
+                    <div class="grade-header-item">Mark</div>
+                </div>
+
+                <!-- Grade Table -->
+                <div id="gradeTableContainer" class="grade-table"></div>
+            </div>
+        </div>
+
+        <!-- Tuition Tab -->
+        <div id="tuitionTab" class="tab-content">
+            <div class="container">
+                <!-- Header Card -->
+                <div class="info-card green">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                        <rect x="2" y="5" width="20" height="14" rx="2" />
+                        <line x1="2" y1="10" x2="22" y2="10" />
+                    </svg>
+                    <h2>Calculate Your Tuition Fee</h2>
+                    <p>Enter your tuition fee and waiver percentage to calculate installments</p>
+                </div>
+
+                <!-- Tuition Fee Input -->
+                <div class="input-group">
+                    <label>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                            <line x1="12" y1="1" x2="12" y2="23" />
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        Total Tuition Fee
+                    </label>
+                    <div class="input-with-suffix">
+                        <input type="number" id="tuitionFee" placeholder="Enter tuition fee" min="0">
+                        <span class="suffix">tk</span>
+                    </div>
+                </div>
+
+                <!-- Waiver Selection -->
+                <div class="input-group">
+                    <label>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                            <line x1="19" y1="5" x2="5" y2="19" />
+                            <circle cx="6.5" cy="6.5" r="2.5" />
+                            <circle cx="17.5" cy="17.5" r="2.5" />
+                        </svg>
+                        Waiver/Scholarship Percentage
+                    </label>
+                    <div class="waiver-options" id="waiverOptions">
+                        <button class="waiver-btn" data-value="0">0%</button>
+                        <button class="waiver-btn" data-value="10">10%</button>
+                        <button class="waiver-btn" data-value="20">20%</button>
+                        <button class="waiver-btn" data-value="25">25%</button>
+                        <button class="waiver-btn" data-value="30">30%</button>
+                        <button class="waiver-btn" data-value="40">40%</button>
+                        <button class="waiver-btn" data-value="50">50%</button>
+                        <button class="waiver-btn" data-value="75">75%</button>
+                        <button class="waiver-btn" data-value="100">100%</button>
+                        <button class="waiver-btn" data-value="custom">Custom</button>
+                    </div>
+                    <div id="customWaiverInput" class="custom-waiver-input hidden">
+                        <div class="input-with-suffix">
+                            <input type="number" id="customWaiver" placeholder="Enter custom percentage" min="0"
+                                max="100">
+                            <span class="suffix">%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tuition Action Buttons -->
+                <div class="action-buttons">
+                    <button id="tuitionResetBtn" class="btn btn-secondary">RESET</button>
+                    <button id="tuitionCalculateBtn" class="btn btn-primary green">CALCULATE</button>
+                </div>
+
+                <!-- Tuition Results -->
+                <div id="tuitionResults" class="tuition-results hidden">
+                    <!-- Total Payable Fee -->
+                    <div class="payable-card">
+                        <div class="payable-header">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4CAF50"
+                                stroke-width="2">
+                                <rect x="2" y="5" width="20" height="14" rx="2" />
+                                <line x1="2" y1="10" x2="22" y2="10" />
+                            </svg>
+                            <span>Total Payable Fee</span>
+                        </div>
+                        <div id="payableFee" class="payable-value">0.00 tk</div>
+                        <div id="waiverInfo" class="payable-info">After 0% waiver</div>
+                    </div>
+
+                    <!-- Installments -->
+                    <h3 class="installments-title">Payment Installments</h3>
+
+                    <div class="installment-card blue">
+                        <div class="installment-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2196F3"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19" />
+                            </svg>
+                        </div>
+                        <div class="installment-content">
+                            <div class="installment-title">1st Installment (40%)</div>
+                            <div id="installment1" class="installment-amount">0.00 tk</div>
+                        </div>
+                    </div>
+
+                    <div class="installment-card orange">
+                        <div class="installment-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF9800"
+                                stroke-width="2">
+                                <path d="M10 3h4a8 8 0 0 1 0 16v-2.5" />
+                                <path d="M7 8h8" />
+                                <path d="M7 12h4" />
+                            </svg>
+                        </div>
+                        <div class="installment-content">
+                            <div class="installment-title">2nd Installment (30%)</div>
+                            <div id="installment2" class="installment-amount">0.00 tk</div>
+                        </div>
+                    </div>
+
+                    <div class="installment-card purple">
+                        <div class="installment-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9C27B0"
+                                stroke-width="2">
+                                <path d="M5 9a7 7 0 0 1 12 0" />
+                                <path d="M5 15a7 7 0 0 0 12 0" />
+                            </svg>
+                        </div>
+                        <div class="installment-content">
+                            <div class="installment-title">3rd Installment (30%)</div>
+                            <div id="installment3" class="installment-amount">0.00 tk</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Privacy Policy Modal -->
+    <div id="privacyModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Privacy Policy</h2>
+                <button class="close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Smart UIU is committed to protecting your privacy. This calculator operates entirely in your browser
+                    and does not collect, store, or transmit any personal data.</p>
+
+                <h3>Data Collection</h3>
+                <p>We do not collect any personal information. All calculations are performed locally in your browser.
+                </p>
+
+                <h3>Local Storage</h3>
+                <p>We only store your theme preference (light/dark mode) in your browser's local storage for your
+                    convenience.</p>
+
+                <h3>Third-Party Services</h3>
+                <p>This application does not use any third-party analytics, tracking, or advertising services.</p>
+
+                <h3>Contact</h3>
+                <p>If you have any questions about this privacy policy, please contact the developer.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Contact Modal -->
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Developer Contact</h2>
+                <button class="close-btn" aria-label="Close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2196F3" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <div>
+                            <strong>Email</strong>
+                            <p>developer@smartuiu.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                        </svg>
+                        <div>
+                            <strong>GitHub</strong>
+                            <p>github.com/smartuiu</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF9800" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <div>
+                            <strong>Version</strong>
+                            <p>1.0.0 (Web)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
