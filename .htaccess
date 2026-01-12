@@ -1,0 +1,12 @@
+# Force HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove duplicate content - redirect index.html to root
+RewriteCond %{THE_REQUEST} ^.*/index\.html
+RewriteRule ^(.*)index.html$ https://uiu-cgpa.pages.dev/ [R=301,L]
+
+# Canonical URL enforcement
+RewriteCond %{HTTP_HOST} !^uiu-cgpa\.pages\.dev$ [NC]
+RewriteRule ^(.*)$ https://uiu-cgpa.pages.dev/$1 [R=301,L]

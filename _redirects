@@ -1,0 +1,9 @@
+# Redirect all non-canonical URLs to the canonical version
+/redirect.html https://uiu-cgpa.pages.dev/ 301!
+/redirect https://uiu-cgpa.pages.dev/ 301!
+
+# Force HTTPS and canonical domain
+http://uiu-cgpa.pages.dev/* https://uiu-cgpa.pages.dev/:splat 301!
+
+# Ensure trailing slash consistency
+https://uiu-cgpa.pages.dev /  301
