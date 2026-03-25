@@ -127,7 +127,9 @@ function initModals() {
         const closeBtn = modal.querySelector('.close-btn');
 
         // Close on close button click
-        closeBtn.addEventListener('click', () => closeModal(modal));
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => closeModal(modal));
+        }
 
         // Close on backdrop click
         modal.addEventListener('click', (e) => {
@@ -143,6 +145,17 @@ function initModals() {
             modals.forEach(modal => closeModal(modal));
         }
     });
+}
+
+// ========================================
+// APP PROMOTION
+// ========================================
+function showAppPromo() {
+    const promoModal = document.getElementById('appPromoModal');
+    openModal(promoModal);
+    setTimeout(() => {
+        closeModal(promoModal);
+    }, 10000); // 10 seconds
 }
 
 // ========================================
@@ -542,6 +555,7 @@ function init() {
     initGradingTable();
     initTuitionCalculator();
     initEventListeners();
+    showAppPromo();
 
     // Initialize with 2 courses
     addCourse();

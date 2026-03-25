@@ -999,6 +999,41 @@ body:not(.light-theme) .moon-icon {
     gap: var(--space-lg);
 }
 
+/* Promo Modal Styles */
+.promo-modal {
+    max-width: 400px;
+    text-align: center;
+    padding: var(--space-xl);
+}
+
+.promo-modal .modal-body {
+    padding: 0;
+}
+
+.promo-modal p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.promo-modal a {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-blue));
+    color: white;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform var(--transition-fast);
+    box-shadow: var(--shadow-md);
+}
+
+.promo-modal a:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
 .contact-item {
     display: flex;
     gap: var(--space-md);
