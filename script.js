@@ -555,7 +555,6 @@ function init() {
     initGradingTable();
     initTuitionCalculator();
     initEventListeners();
-    showAppPromo();
 
     // Initialize with 2 courses
     addCourse();

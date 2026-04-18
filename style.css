@@ -255,6 +255,80 @@ body:not(.light-theme) .moon-icon {
     padding: var(--space-lg);
 }
 
+.content-intro,
+.content-details,
+.app-download {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+}
+
+.content-intro h2,
+.content-details h2,
+.app-download h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--space-sm);
+}
+
+.content-intro p,
+.content-details p,
+.app-download p {
+    color: var(--text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.formula-grid,
+.details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--space-md);
+}
+
+.formula-card,
+.details-card {
+    background-color: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-md);
+}
+
+.formula-card h3,
+.details-card h3 {
+    font-size: 1rem;
+    margin-bottom: var(--space-xs);
+    color: var(--text-primary);
+}
+
+.formula-card p,
+.details-card p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+}
+
+.app-download {
+    text-align: center;
+    background: linear-gradient(135deg, rgba(255, 152, 0, 0.08), rgba(33, 150, 243, 0.08));
+}
+
+.app-download a {
+    display: inline-block;
+    text-decoration: none;
+    color: #ffffff;
+    background: var(--gradient-orange);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-pill);
+    font-weight: 700;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: var(--shadow-orange);
+}
+
+.app-download a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 152, 0, 0.35);
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -1083,6 +1157,18 @@ body:not(.light-theme) .moon-icon {
     
     .main-content {
         padding: var(--space-md);
+    }
+
+    .content-intro,
+    .content-details,
+    .app-download {
+        padding: var(--space-md);
+    }
+
+    .content-intro h2,
+    .content-details h2,
+    .app-download h2 {
+        font-size: 1.25rem;
     }
     
     .action-buttons {
